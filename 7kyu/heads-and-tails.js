@@ -12,15 +12,11 @@
 // If there aren't any cases for the given amount of heads and tails - return "No solutions"
 
 function beasts (heads, tails) {
-    let orthus;
-    let hydra;
-    let result = [];
-    hydra = Math.floor((heads - 2 * tails) / 3);
-    orthus = tails - hydra;
-    if (2 * orthus + 5 * hydra === heads) {
-        result.push(orthus, hydra);
-        return result;
-    } else {
+    let hydra = Math.floor((heads - 2 * tails) / 3);
+    let orthus = tails - hydra;
+    if ((2 * orthus + 5 * hydra !== heads) || hydra < 0 || orthus < 0) {
         return 'No solution';
+    } else {
+        return [orthus, hydra];
     }
 }
