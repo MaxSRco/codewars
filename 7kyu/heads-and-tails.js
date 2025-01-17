@@ -14,9 +14,7 @@
 function beasts (heads, tails) {
     let hydra = Math.floor((heads - 2 * tails) / 3);
     let orthus = tails - hydra;
-    if ((2 * orthus + 5 * hydra !== heads) || hydra < 0 || orthus < 0) {
-        return 'No solution';
-    } else {
-        return [orthus, hydra];
-    }
+    return ((2 * orthus + 5 * hydra !== heads) || hydra < 0 || orthus < 0) ? 'No solution' : [orthus, hydra];
 }
+
+console.log(beasts(371, 88));
