@@ -10,4 +10,4 @@ function sumMix(array){
     return sum;
 }
 
-console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]))su;
+console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]));
