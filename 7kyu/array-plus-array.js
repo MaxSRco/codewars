@@ -2,20 +2,17 @@
 //
 // P.S. Each array includes only integer numbers. Output is a number too.
 
+console.log(arrayPlusArray([1, 2, 3], [4, 15, 6, 9]));
+
+
 function arrayPlusArray(arr1, arr2) {
-    let sumElements = 0;
-    if(arr1.length === arr2.length) {
-        for (let i = 0; i < arr1.length; i++) {
-            sumElements += arr1[i] + arr2[i];}
-    } else {
-        for (let i = 0; i < arr1.length; i++) {
-            sumElements += arr1[i];
-        }
-        for (let i = 0; i < arr2.length; i++) {
-            sumElements += arr2[i];
-        }
-    }
-    return sumElements;
+    return getArraySum(arr1) + getArraySum(arr2);
 }
 
-console.log(arrayPlusArray([1, 2, 3], [4, 5, 6, 9]));
+function getArraySum(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    return sum;
+}
