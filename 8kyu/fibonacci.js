@@ -5,10 +5,8 @@ function fibonacci(n) {
 
     for (let i = 1; i < n; i++) {
         fibonacciNum[i + 1] = fibonacciNum[i] + fibonacciNum[i-1];
-
-
     }
     return fibonacciNum[n];
 }
 
-console.log(fibonacci(11));
+console.log(fibonacci(12));
