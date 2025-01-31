@@ -1,6 +1,3 @@
-// Write a function findPeakElement that takes an array of integers and finds a peak element, and returns its index.
-// A peak element is an element that is greater than its neighbors.
-
 function findPeakElement(nums) {
     let peakElement = nums[0];
     let index = 0;
@@ -15,4 +12,4 @@ function findPeakElement(nums) {
     return index;
 }
 
-console.log(findPeakElement([4,2,5,6])); // 3
+console.log(findPeakElement([2,4,6,7,9]));
