@@ -28,3 +28,5 @@ function howManydays(month){
     }
     return days;
 }
+
+console.log(howManydays(3));
