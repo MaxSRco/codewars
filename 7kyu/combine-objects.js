@@ -11,15 +11,25 @@
 // combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 
 function combine(...objects) {
-    // console.log(objects.length);
-    for (const object of objects) {
-               
-    }
+    const resultObj = {};
+
+    objects.forEach((obj) => {
+        for (const objKey in obj) {
+            if (resultObj.hasOwnProperty(objKey)) {
+                resultObj[objKey] += obj[objKey];
+            } else {
+                resultObj[objKey] = obj[objKey];
+            }
+        }
+    })
+    return resultObj;
 }
 
 const objA = { a: 10, b: 20, c: 30 };
 const objB = { a: 3, c: 6, d: 3 };
 const objC = { a: 5, d: 11, e: 8 };
-// const objD = { c: 3 };
+const objD = { c: 3 };
 
-console.log(combine(objA, objB, objC));
+
+
+console.log(combine(objB, objA, objC, objD));
