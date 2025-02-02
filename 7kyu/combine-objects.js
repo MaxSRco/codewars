@@ -21,6 +21,7 @@ function combine(...objects) {
                 resultObj[objKey] = obj[objKey];
             }
         }
+        console.log(resultObj);
     })
     return resultObj;
 }
