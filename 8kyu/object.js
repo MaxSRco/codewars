@@ -6,8 +6,7 @@
 // "This white dog has 4 legs."
 
 function animal(obj){
-    const result = `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
-    return result;
+    return  result = `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
 }
 
 console.log(animal({name:"dog",legs:4,color:"white"}));
