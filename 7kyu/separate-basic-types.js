@@ -19,12 +19,8 @@ function separateTypes(input) {
     const result = {};
     input.forEach(elem => {
         let curType = typeof elem;
-        if (!result.hasOwnProperty(curType)) {
-            result[curType] = [elem];
-        } else {
-            result[curType].push(elem);
-        }
-    })
+        !result.hasOwnProperty(curType) ? result[curType] = [elem] : result[curType].push(elem);
+        });
     return result;
 }
 
